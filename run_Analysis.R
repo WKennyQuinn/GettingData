@@ -53,3 +53,5 @@ colnames(HAR_activity) = "Activity"
 #   For each activity by each subject, calculate the mean of all variables
 HAR_merge <- cbind(HAR_subject,HAR_activity,HAR_data_subset)
 HAR_Summary = aggregate(.~Subject_ID+Activity,data=HAR_merge,mean)
+
+write.table(HAR_Summary,file="./HAR_Summary.txt",row.name=FALSE)

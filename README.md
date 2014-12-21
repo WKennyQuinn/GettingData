@@ -49,4 +49,7 @@ A final dataframe is created summarizing the subset data. *aggregate()* is used 
 
 Per tidy data principles, the mean of each variable is stored in a single column. Each observation (subject/activity pair) is saved as a single row. Each column is labeled with a descriptive, human-readable name.
 
-The final data is stored as *HAR_Summary*.
+The final data is saved as a txt file for submittal as "HAR_Summary.txt"
+
+To read the data in its original format, use the following command:
+HAR_Summary <- read.table("HAR_Summary.txt",header=TRUE)
